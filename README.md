@@ -16,7 +16,7 @@ Project ini terdiri dari:
 5.	Penumpang.java
 6.	Bus.java
 7.	TestBus.java
-8.	
+
 Penjelasan Setiap Class
 1. Person.java
 Class abstract yang menjadi superclass untuk semua penumpang.
