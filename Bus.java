@@ -49,4 +49,36 @@ public class Bus {
 
         return false;
     }
+     private boolean hapus(Penumpang[] arr, String nama) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != null && arr[i].getNama().equalsIgnoreCase(nama)) {
+                arr[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean turun(String nama) {
+        if (hapus(biasa, nama)) return true;
+        if (hapus(prioritas, nama)) return true;
+        if (hapus(berdiri, nama)) return true;
+        return false;
+    }
+
+    private String list(Penumpang[] arr) {
+        String s = "";
+        for (Penumpang p : arr) if (p != null) s += p.getNama() + ", ";
+        return s.equals("") ? "<kosong>" : s;
+    }
+
+    @Override
+    public String toString() {
+        return "Penumpang Biasa: " + list(biasa) +
+               "\nPenumpang Prioritas: " + list(prioritas) +
+               "\nPenumpang Berdiri: " + list(berdiri) +
+               "\nJumlah: " + total() +
+               "\nPendapatan: " + totalPendapatan;
+    }
+}
 
