@@ -25,3 +25,28 @@ public class Bus {
         }
         return false;
     }
+    public boolean naik(Penumpang p) {
+        if (total() >= 40) return false;
+
+        if (p.getSaldo() < ONGKOS) {
+            System.out.println("Saldo tidak cukup.");
+            return false;
+        }
+
+        try {
+            if (p.isPrioritas()) {
+                if (tambah(prioritas, p)) { p.bayar(ONGKOS); totalPendapatan += ONGKOS; return true; }
+                if (tambah(biasa, p)) { p.bayar(ONGKOS); totalPendapatan += ONGKOS; return true; }
+                if (tambah(berdiri, p)) { p.bayar(ONGKOS); totalPendapatan += ONGKOS; return true; }
+            } else {
+                if (tambah(biasa, p)) { p.bayar(ONGKOS); totalPendapatan += ONGKOS; return true; }
+                if (tambah(berdiri, p)) { p.bayar(ONGKOS); totalPendapatan += ONGKOS; return true; }
+            }
+        } catch (MyException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+
+        return false;
+    }
+
