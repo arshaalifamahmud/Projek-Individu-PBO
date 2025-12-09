@@ -28,26 +28,26 @@ Konsep yang digunakan:
 	•	Abstraction (class abstrak)
 	•	Inheritance (diturunkan ke Penumpang)
 
-2. TopUp.java
+3. TopUp.java
 Sebuah interface yang mendefinisikan method:
 	•	tambahSaldo(int jumlah)
 Interface ini memastikan bahwa objek penumpang dapat melakukan top-up saldo.
 Konsep: Interface & Polymorphism
 
-3. MyException.java
+4. MyException.java
 Custom exception yang digunakan ketika penumpang tidak memiliki saldo cukup untuk membayar ongkos bus.
 Digunakan melalui:
 throw new MyException("Saldo tidak cukup!");
 Konsep: Exception Handling
 
-4. Jenis.java
+5. Jenis.java
 Enum sederhana untuk membedakan tipe penumpang:
 	•	PRIORITAS
 	•	BIASA
 Dipakai untuk menentukan posisi duduk dan aturan naik bus.
 Konsep: Enum
 
-5. Penumpang.java
+6. Penumpang.java
 Subclass dari Person dan implementasi TopUp.
 Class ini merepresentasikan satu penumpang bus.
 Atribut:
@@ -67,7 +67,7 @@ Konsep yang digunakan:
 	•	Interface implementation
 	•	Enum usage
 
-6. Bus.java
+7. Bus.java
 Class utama yang menangani logika bus.
 Menyimpan array:
 	•	16 kursi biasa
@@ -86,7 +86,7 @@ Konsep yang digunakan:
 	•	Business logic with priority rules
 	•	Exception handling (ketika saldo kurang)
 
-7. TestBus.java
+8. TestBus.java
 Class main untuk menjalankan simulasi.
 Fitur:
 	•	Menu interaktif:
