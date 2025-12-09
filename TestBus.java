@@ -27,3 +27,18 @@ public class TestBus {
                 boolean hamil = h.equalsIgnoreCase("y");
 
                 Penumpang pn = new Penumpang(id++, nama, umur, hamil);
+if (bus.naik(pn))
+                    System.out.println("Penumpang berhasil naik!");
+                else
+                    System.out.println("Gagal naik.");
+            }
+
+            else if (p.equals("2")) {
+                System.out.print("Nama: ");
+                String nama = in.nextLine();
+
+                if (bus.turun(nama))
+                    System.out.println("Penumpang berhasil turun!");
+                else
+                    System.out.println("Tidak ditemukan.");
+            }
