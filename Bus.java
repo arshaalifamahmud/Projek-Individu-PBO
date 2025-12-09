@@ -1,1 +1,13 @@
+public class Bus {
+    private Penumpang[] biasa = new Penumpang[16];
+    private Penumpang[] prioritas = new Penumpang[4];
+    private Penumpang[] berdiri = new Penumpang[20];
 
+    public static final int ONGKOS = 2000;
+    private int totalPendapatan = 0;
+
+    private int hitung(Penumpang[] arr) {
+        int c = 0;
+        for (Penumpang p : arr) if (p != null) c++;
+        return c;
+    }
