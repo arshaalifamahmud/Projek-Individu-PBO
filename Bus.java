@@ -11,3 +11,17 @@ public class Bus {
         for (Penumpang p : arr) if (p != null) c++;
         return c;
     }
+
+    public int total() {
+        return hitung(biasa) + hitung(prioritas) + hitung(berdiri);
+    }
+
+    private boolean tambah(Penumpang[] arr, Penumpang p) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == null) {
+                arr[i] = p;
+                return true;
+            }
+        }
+        return false;
+    }
