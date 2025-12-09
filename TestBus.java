@@ -42,3 +42,16 @@ public class TestBus {
                 else
                     System.out.println("Tidak ditemukan.");
             }
+                
+             else if (p.equals("3")) {
+                System.out.println(bus);
+            }
+
+            else if (p.equals("0")) {
+                break;
+            }
+
+            System.out.println("-------------------------------");
+        }
+    }
+}
