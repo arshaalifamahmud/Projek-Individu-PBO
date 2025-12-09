@@ -14,3 +14,16 @@ public class TestBus {
             System.out.print("Pilih: ");
             String p = in.nextLine();
 
+
+            if (p.equals("1")) {
+                System.out.print("Nama: ");
+                String nama = in.nextLine();
+
+                System.out.print("Umur: ");
+                int umur = Integer.parseInt(in.nextLine());
+
+                System.out.print("Hamil (y/n): ");
+                String h = in.nextLine();
+                boolean hamil = h.equalsIgnoreCase("y");
+
+                Penumpang pn = new Penumpang(id++, nama, umur, hamil);
