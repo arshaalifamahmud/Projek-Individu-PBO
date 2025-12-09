@@ -27,7 +27,7 @@ public class TestBus {
                 boolean hamil = h.equalsIgnoreCase("y");
 
                 Penumpang pn = new Penumpang(id++, nama, umur, hamil);
-if (bus.naik(pn))
+            if (bus.naik(pn))
                     System.out.println("Penumpang berhasil naik!");
                 else
                     System.out.println("Gagal naik.");
